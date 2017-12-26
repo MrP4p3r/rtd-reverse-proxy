@@ -3,7 +3,8 @@
 RTDSLUG=$1
 RTDADDRESS=$2
 
-cat << EOF > /etc/nginx/conf.d/
+rm -rf /etc/nginx/conf.d/*
+cat << EOF > /etc/nginx/conf.d/rtd-proxy.conf
 
 server {
     listen 80;
